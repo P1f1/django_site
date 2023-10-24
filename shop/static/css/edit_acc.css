@@ -1,0 +1,57 @@
+/* Стили для страницы редактирования */
+
+/* Контейнер для формы редактирования */
+.edit_form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F9F9F9;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовков полей формы */
+.edit_form label {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Стили для полей формы */
+.edit_form form p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Стили для полей ввода */
+.edit_form input[type="text"],
+.edit_form input[type="password"],
+.edit_form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Стили для кнопки "Сохранить изменения" */
+.edit_form input[type="submit"] {
+    background-color: #460078;
+    color: #FFF;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit_form input[type="submit"]:hover {
+    background-color: #5C1A95;
+}

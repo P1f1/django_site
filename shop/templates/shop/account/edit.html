@@ -1,0 +1,23 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Редактирование{% endblock %}
+
+{% block styles %}
+    {{ block.super }}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/edit_acc.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include 'shop/account/sidebar_acc.html' with filter=filter %}
+
+    <div class="edit_form">
+        <p>Вы можете редактировать свой аккаунт, используя следующую форму:</p>
+        <form method="post" enctype="multipart/form-data">
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            {% csrf_token %}
+        <p><input type="submit" value="Сохранить изменения"></p>
+        </form>
+    </div>
+{% endblock %}

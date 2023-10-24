@@ -1,0 +1,25 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Личный кабинет{% endblock %}
+
+{% block styles %}
+    {{ block.super }}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include 'shop/account/sidebar_acc.html' with filter=filter %}
+
+    <div class="account">
+        {% if profile.photo %}
+            <p><img src="{{ profile.photo.url }}"></p>
+        {% endif %}
+        <p>{{ profile.user }}</p>
+        <p>{{ profile.email }}</p>
+        {% if profile.date_of_birth %}
+            <p>{{ profile.date_of_birth }}</p>
+        {% endif %}
+        <p><a href="{% url 'shop:edit' %}">Редактировать профиль</a></p>
+    </div>
+{% endblock %}

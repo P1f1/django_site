@@ -1,0 +1,54 @@
+{% extends "shop/base.html" %}
+{% block title %}{{ product.name }}{% endblock title %}
+
+{% block content %}
+
+<div class="detail_prod">
+    <h1>{{ product.name }}</h1>
+    <img src="{{ product.image.url }}">
+    <p class="desc">{{ product.desc }}</p>
+
+    <div class="price">
+        <form action="{% url 'cart:cart_add' product.id %}" method="post">
+            {{ cart_product_form }}
+            {% csrf_token %}
+            <input type="hidden" name="quantity" value="1">
+            <input type="submit" class="price-input" value="{{ product.price }}">
+        </form>
+    </div>
+</div>
+
+<div class="list_review">
+    {% if reviews %}
+        <h2>Отзывы:</h2>
+        <hr>
+
+        {% for review in reviews %}
+        <div class="review">
+            <p class="info_r">
+                <b>{{ review.name }}</b> <small>{{ review.created }}</small>
+            </p>
+
+            <p class="text_r">
+                -{{ review.text }}
+            </p>
+
+            {% if review.image %}
+                <div class="image_r">
+                    <img src="{{ review.image.url }}">
+                </div>
+            {% endif %}
+        </div>
+        {% empty %}
+        {% endfor %}
+
+    {% else %}
+        <h2>Здесь пока что нет отзывов, будьте первым!</h2>
+        <hr>
+
+    {% endif %}
+
+    {% include "shop/product/includes/review_form.html" %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+/*account*/
+/*account*/
+/*account*/
+.account {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Фото профиля пользователя */
+.account img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Информация о пользователе */
+.account p {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Имя пользователя */
+.account p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Электронная почта пользователя */
+.account p:nth-child(2) {
+    font-style: italic;
+    color: #555;
+}
+
+/* Дата рождения пользователя */
+.account p:nth-child(3) {
+    font-weight: bold;
+}
+
+/* Стили для кнопки в личном кабинете */
+.account a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #460078;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 15px auto; /* Центрируем кнопку по горизонтали */
+    text-align: center; /* Выравниваем текст по центру */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.account a:hover {
+    background-color: #5C1A95;
+}

@@ -1,0 +1,22 @@
+{% extends "shop/base.html" %}
+
+{% block content %}
+<h1>Доступные товары</h1>
+
+{% include 'shop/product/sidebar.html' with filter=filter %}
+
+<div class="list_product">
+    {% for product in filter.qs %}
+        <div class="product">
+            <a href="{{ product.get_absolute_url }}">
+                {{ product.name }}
+            </a>
+            <a href="{{ product.get_absolute_url }}">
+                <img src="{{ product.image.url }}">
+            </a>
+            <p>{{ product.desc|truncatewords:30 }}</p>
+            <p class="price">Цена: {{ product.price }} руб</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}

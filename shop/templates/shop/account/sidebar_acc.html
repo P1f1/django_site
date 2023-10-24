@@ -1,0 +1,23 @@
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/sidebar_acc.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="{% url 'shop:account' %}">Профиль</a></li>
+            <li><a href="{% url 'shop:edit' %}">Настройки профиля</a></li>
+            <li><a href="#">Избранное</a></li>
+            <li><a href="#">Адрес доставки</a></li>
+            <li><a href="#">Купоны/акции</a></li>
+            <li><a href="#">История заказов</a></li>
+            <li><a href="#">Обратная связь и поддержка</a></li>
+            <li><a href="{% url 'logout' %}">Выход из аккаунта</a></li>
+        </ul>
+    </div>
+</body>
+</html>

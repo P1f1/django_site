@@ -1,0 +1,38 @@
+/*Cart*/
+/*Cart*/
+/*Cart*/
+.cart {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart th,
+.cart td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.cart th {
+    background-color: #6107A2;
+    color: #fff;
+}
+
+.cart td {
+    background-color: #fff; /* Фоновый цвет белый */
+    color: #333; /* Цвет текста в ячейках */
+}
+
+.cart a {
+    text-decoration: none;
+    color: #460078;
+}
+
+.cart a:hover {
+    color: #5C1A95;
+}
+
+.cart img {
+    max-width: 150px; /* Максимальная ширина изображения */
+    max-height: 150px; /* Максимальная высота изображения */
+}

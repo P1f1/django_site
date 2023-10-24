@@ -1,0 +1,11 @@
+{% extends "shop/base.html" %}
+{% block title %}Отзыв добавлен!{% endblock %}
+
+{% block content %}
+    {% if review %}
+        <h2>Спасибо за отзыв!</h2>
+        <p><a href="{{ product.get_absolute_url }}">Вернуться назад.</a></p>
+    {% else %}
+        {% include "shop/product/includes/review_form.html" %}
+    {% endif %}
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Добро пожаловать!{% endblock %}
+
+{% block content %}
+    <div class="welcome_container">
+        <h1>Добро пожаловать, {{ new_user }}!</h1>
+        <p>
+            Ваша учётная запись успешно создана.
+            Теперь вы можете <a href="{% url 'login' %}" class="link">авторизоваться</a>.
+        </p>
+    </div>
+{% endblock %}

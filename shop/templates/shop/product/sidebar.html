@@ -1,0 +1,31 @@
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/sidebar.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Фильтры:</h2>
+        <form method="get">
+            <div class="filter-field">
+                <label for="{{ filter.form.min_price.id_for_label }}">{{ filter.form.min_price.label }}</label>
+                {{ filter.form.min_price }}
+            </div>
+            <div class="filter-field">
+                <label for="{{ filter.form.max_price.id_for_label }}">{{ filter.form.max_price.label }}</label>
+                {{ filter.form.max_price }}
+            </div>
+            <div class="filter-field">
+                <label for="{{ filter.form.manufacturer.id_for_label }}">{{ filter.form.manufacturer.label }}</label>
+                {{ filter.form.manufacturer }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Фильтровать</button>
+            <button type="submit" name="reset" class="btn btn-secondary">Сбросить</button>
+        </form>
+    </div>
+</body>
+</html>

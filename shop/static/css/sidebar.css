@@ -1,0 +1,65 @@
+/* Стили для sidebar */
+/* Стили для sidebar */
+/* Стили для sidebar */
+.sidebar {
+    margin: 2px 0px 0px 40px;
+    background-color: #F0F0F0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    float: left;
+    width: 300px;
+}
+
+.sidebar h2 {
+    color: #460078;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar form {
+    margin-bottom: 20px;
+}
+
+.sidebar .filter-field {
+    margin-bottom: 20px;
+}
+
+.sidebar label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sidebar select,
+.sidebar input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sidebar button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sidebar .btn-primary {
+    background-color: #460078;
+    color: #fff;
+}
+
+.sidebar .btn-secondary {
+    background-color: #B593CE;
+    color: #fff;
+}
+
+.sidebar .btn-primary:hover,
+.sidebar .btn-secondary:hover {
+    background-color: #5C1A95;
+}

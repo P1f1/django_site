@@ -1,0 +1,7 @@
+<div class="form_review">
+ <form action="{% url 'shop:product_review' product.id %}" method="post" enctype="multipart/form-data">
+  {{ review_form.as_p }}
+  {% csrf_token %}
+ <p><input type="submit" value="Добавить отзыв"></p>
+ </form>
+</div>
