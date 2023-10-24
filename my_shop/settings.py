@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f38u9h%u0_rhgdq-+3+&k00pr8m05$kh0%6u^5uejw04x7n7w1'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -159,6 +159,6 @@ AUTHENTICATION_BACKENDS = (
 
 CART_SESSION_ID = 'cart'
 
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51NwUj3ELt8hiy6a0h7LEK6fi7XW4xlo9rUcWkWAOGVBYuh5P2ITn8Q1SjgDlA0B3WsoIyRaYFjytzS6a58HxpFh80049EBNy5V'
-STRIPE_SECRET_KEY = 'sk_test_51NwUj3ELt8hiy6a0AoMGgw9drrgi8ibyb2pQkmeNriwf6sIiox1lLRFNphSyKMpW4BHU22hxBiXRFE5qzmxgX69v002QPiDSp6'
+STRIPE_PUBLISHABLE_KEY = ''
+STRIPE_SECRET_KEY = ''
 STRIPE_API_VERSION = '2023-08-16'
